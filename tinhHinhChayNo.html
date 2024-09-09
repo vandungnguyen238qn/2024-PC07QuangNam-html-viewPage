@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thống kê tình hình cháy nổ Quảng Nam</title>
+    <title>Thống kê tình hình cháy nổ Quảng Nam</title><!-- Favicon -->
+    <link href="resources/favicon/favicon.ico" rel="icon">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         body {
@@ -61,9 +62,9 @@
 
 <body>
     <!-- Phần tiêu đề -->
-    <div class="title">
+<!--    <div class="title">
         Tình hình cháy, nổ trên địa bàn tỉnh Quảng Nam
-    </div>
+    </div>-->
 
     <div class="chart-container">
         <canvas id="barChart"></canvas>
@@ -102,7 +103,7 @@
                 labels: ['2020', '2021', '2022', '2023', '2024 (tính đến tháng 9)'],
                 datasets: [{
                     label: 'Số vụ cháy',
-                    data: [100, 120, 130, 110, 90],
+                    data: [40, 30, 50, 55, 40],
                     backgroundColor: 'red'
                 }, {
                     label: 'Thiệt hại tài sản (tỉ đồng)',
@@ -110,7 +111,7 @@
                     backgroundColor: 'green'
                 }, {
                     label: 'Số người chết',
-                    data: [3, 2, 4, 5, 1],
+                    data: [3, 2, 3, 2, 1],
                     backgroundColor: 'yellow'
                 }]
             },
@@ -146,13 +147,13 @@
         }
 
         // Dữ liệu cho các biểu đồ tròn
-        const pieData2020 = [1, 70, 20, 2, 7];
-        const pieData2021 = [0, 60, 20, 2, 38];
-        const pieData2022 = [0, 50, 20, 2, 58];
-        const pieData2023 = [2, 80, 20, 2, 6];
-        const pieData2024 = [1, 65, 20, 2, 2];
+        const pieData2020 = [10, 41, 20, 20, 7];
+        const pieData2021 = [10, 32, 20, 20, 38];
+        const pieData2022 = [10, 22, 20, 20, 58];
+        const pieData2023 = [12, 52, 20, 20, 6];
+        const pieData2024 = [11, 32, 20, 20, 2];
 
-        const pieLabels = ['Đốt phá hại', 'Chạm chập điện', 'Sơ suất bất cẩn', 'Thiên tai (sét đánh)', 'Nguyên nhân khác'];
+        const pieLabels = ['Do đốt phá hại', 'Do sự cố hệ thống điện', 'Do sơ suất bất cẩn', 'do thiên tai', 'Các nguyên nhân khác'];
 
         // Tạo biểu đồ tròn
         createPieChart(document.getElementById('pieChart2020').getContext('2d'), pieData2020, pieLabels, 'Nguyên nhân cháy năm 2020');
